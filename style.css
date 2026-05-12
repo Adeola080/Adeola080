@@ -54,6 +54,33 @@ header p {
     margin-bottom: 30px;
 }
 
+.settings-section {
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-light);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 0;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 25px 0;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -65,16 +92,17 @@ label {
     color: var(--text-color);
 }
 
-input {
+input, select {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
 }
 
-input:focus {
+input:focus, select:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
@@ -114,15 +142,66 @@ input:focus {
     color: var(--text-color);
 }
 
-/* Results Section */
-.results-section {
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 2px dashed var(--border-color);
+.hidden {
+    display: none !important;
 }
 
-.results-section.hidden {
-    display: none;
+/* Table Section */
+#appliance-list-section {
+    margin-top: 30px;
+}
+
+#appliance-list-section h3 {
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--bg-color);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+tr:hover td {
+    background-color: #f9f9f9;
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: var(--error-color);
+    color: white;
+}
+
+/* Results Section */
+.results-section {
+    padding-top: 20px;
+    border-top: 2px dashed var(--border-color);
 }
 
 .results-section h2 {
